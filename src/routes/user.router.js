@@ -6,7 +6,7 @@ const userController = require("../controller/auth.controller")
 // const auth = require("../controller/auth.controller")
 const auth = require("../middleware/auth")
 
-router.post("/login", auth, userController.login)
+router.post("/login", userController.login)
 router.post("/register", userController.register)
 
 module.exports = router;
