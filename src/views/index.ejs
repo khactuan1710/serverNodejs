@@ -1,13 +1,74 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='./stylesheets/style.css'/>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheets/style.css"/>
 </head>
 <body>
-<h1><%= title %></h1>
-<a id="a">Welcome to <%= title %></a>
-<p>abc def ghi gggg</p>
-<caption href="#">aa abc a />
+<a class="h1">Document</a>
+
+<div class="book">
+    <a class="h3 text-monospace">Book</a>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Get all book</li>
+        <li class="list-group-item">Insert book</li>
+        <li class="list-group-item">Update book</li>
+        <li class="list-group-item">Delete book</li>
+    </ul>
+</div>
+<br/>
+<div class="list-group">
+    <a href="#" class="list-group-item list-group-item-action active">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">List group item heading</h5>
+            <small>3 days ago</small>
+        </div>
+        <p class="mb-1">Some placeholder content in a paragraph.</p>
+        <small>And some small print.</small>
+    </a>
+    <a href="#" class="list-group-item list-group-item-action">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">List group item heading</h5>
+            <small class="text-muted">3 days ago</small>
+        </div>
+        <p class="mb-1">Some placeholder content in a paragraph.</p>
+        <small class="text-muted">And some muted small print.</small>
+    </a>
+    <a href="#" class="list-group-item list-group-item-action">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">List group item heading</h5>
+            <small class="text-muted">3 days ago</small>
+        </div>
+        <p class="mb-1">Some placeholder content in a paragraph.</p>
+        <small class="text-muted">And some muted small print.</small>
+    </a>
+</div>
+
+<!--<div id="Mess">-->
+<!--</div>-->
+
+<!--<ul id="messages"></ul>-->
+<!--&lt;!&ndash;<form id="form" action="">&ndash;&gt;-->
+
+<!--<form id="chat-form">-->
+
+<!--    <input-->
+<!--            id="msg"-->
+<!--            type="text"-->
+<!--            placeholder="Enter Message"-->
+<!--            required-->
+<!--            autocomplete="off"-->
+<!--    />-->
+<!--    <button class="btn"><i class="fas fa-paper-plane"></i> Send</button>-->
+<!--</form>-->
+<!--&lt;!&ndash;</form>&ndash;&gt;-->
+<!--<script src="/socket.io/socket.io.js"></script>-->
+<!--<script src="javascripts/chat.js"></script>-->
 </body>
 </html>

@@ -19,6 +19,8 @@ db.sequelize = sequelize;
 db.book = require("./books.model")(sequelize, Sequelize);
 db.customer = require("./customer.model")(sequelize, Sequelize);
 db.user = require("./user.model")(sequelize, Sequelize);
+db.comment = require("./comment.model")(sequelize, Sequelize);
+db.image = require("./image.model")(sequelize, Sequelize);
 
 
 module.exports = db;

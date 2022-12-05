@@ -11,11 +11,11 @@ class AuthController {
     async login(req, res) {
         try {
             const err = validateLogin.validate(req.body);
-            if (err) {
+            if (!err) {
                 console.log(err)
-                return response.validationErrorWithData(res, err.error.details[0].message,)
+                return response.validationErrorWithData(res, err.error, "")
             }
-            const username = req.body.username.toLowerCase() || "test";
+            const username = req.body.username || "test";
             const password = req.body.password || "12345";
 
             let data = await UserModel.findAll({
@@ -53,29 +53,26 @@ class AuthController {
             const key = await randomString.generate(20);
             const srect = await bcrypt.hash(key, salt1);
             // console.log(srect);
-
-            const username = req.body.username.toLowerCase();
-            const password = req.body.password.toLowerCase();
-            console.log(req.body);
-            if (username.length <= 0 || password.length <= 0)
-                return response.ErrorResponse(res, "not null field");
+            await validateRegister.validate(req.body)
 
             const user = await UserModel.findAll({
                 where: {
-                    username: username,
+                    username: req.body.userName,
                 },
             });
             if (user.length > 0)
                 return response.ErrorResponse(res, "Tai khoan da ton tai!");
 
             const salt = await bcrypt.genSalt(12);
-            const hashPassword = await bcrypt.hash(password, salt);
+            const hashPassword = await bcrypt.hash(req.body.password, salt);
             const keyApi = await randomString.generate(20);
             const refreshToken = await randomString.generate(30);
 
             const userCre = await UserModel.create({
-                userName: username,
+                userName: req.body.userName,
                 password: hashPassword,
+                email: req.body.email,
+                fullName: req.body.fullName,
                 keyApi: keyApi,
                 refreshToken: refreshToken,
             });

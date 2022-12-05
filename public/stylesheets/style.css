@@ -1,8 +1,28 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
+
+#user {
+    color: #95011b;
+    font-size: 12px;
 }
+
+#mess {
+    color: white;
+    margin-top: 5px;
+}
+
+#parMess {
+    background: cadetblue;
+    padding: 5px 5px 5px 15px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+li {
+    margin-top: 5px;
+    text-decoration: none;
+}
+

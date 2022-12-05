@@ -14,6 +14,14 @@ module.exports = (sequelize, Sequelize) => {
             type: Sequelize.STRING,
             allowNull: false,
         },
+        email: {
+            type: Sequelize.STRING,
+            allowNull: false
+        },
+        fullName: {
+            type: Sequelize.STRING,
+            allowNull: false
+        },
         keyApi: {
             type: Sequelize.STRING,
             allowNull: false,
